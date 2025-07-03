@@ -1,48 +1,315 @@
+/* Premium dark theme with vibrant, professional accents */
+:root {
+    --primary: #0288d1; /* Bright blue for primary actions */
+    --primary-dark: #01579b; /* Darker blue for hover */
+    --primary-glow: rgba(2, 136, 209, 0.3); /* Glow for focus/hover */
+    --accent: #ff4081; /* Vibrant pink for secondary actions */
+    --accent-dark: #c51162; /* Darker pink for hover */
+    --danger: #d81b60; /* Bold magenta for destructive actions */
+    --danger-dark: #ad1457; /* Darker magenta for hover */
+    --success: #26a69a; /* Teal-green for success */
+    --success-glow: rgba(38, 166, 154, 0.3);
+    
+    --bg-dark: #121212; /* Deep black for premium background */
+    --bg-panel: #1e1e1e; /* Slightly lighter for panels */
+    --bg-element: #2a2a2a; /* Dark gray for inputs */
+    --text-primary: #e0e0e0; /* Light gray for text */
+    --text-secondary: #b0bec5; /* Softer gray for secondary text */
+    --border: #37474f; /* Subtle gray-blue for borders */
+    
+    --radius: 8px; /* Rounded for modern look */
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth animations */
+    --shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Deep shadow */
+    --glow: 0 0 10px rgba(2, 136, 209, 0.4); /* Blue glow for emphasis */
+}
+
+/* Reset for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styling with premium typography */
 body {
-  font-family: Arial, sans-serif;
-  width: 300px;
-  padding: 10px;
+    font-family: 'Roboto', -apple-system, 'Segoe UI', sans-serif;
+    width: 360px;
+    padding: 20px;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: 400;
 }
 
+/* Flexible container */
 .container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
+/* Sleek header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Stylish logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.logo-icon:hover {
+    box-shadow: var(--glow);
+}
+
+/* Professional heading */
 h2 {
-  margin: 0;
-  font-size: 1.2em;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-primary);
 }
 
-input, select, button {
-  width: 100%;
-  padding: 5px;
-  margin: 5px 0;
-  box-sizing: border-box;
+/* Elegant section */
+.section {
+    background: var(--bg-panel);
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
 }
 
+.section:hover {
+    box-shadow: var(--glow);
+    transform: translateY(-1px);
+}
+
+/* Section title */
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.section-title::before {
+    content: "";
+    width: 4px;
+    height: 16px;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.section-title:hover::before {
+    background: var(--accent);
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 16px;
+}
+
+/* Clean labels */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* Modern inputs and selects */
+input, select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-element);
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: var(--primary-glow);
+}
+
+/* Button group */
+.buttons-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Premium buttons */
 button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-button:hover {
-  background-color: #45a049;
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
 }
 
+button:active::after {
+    width: 180px;
+    height: 180px;
+}
+
+/* Save button */
+#save {
+    background: var(--primary);
+}
+
+#save:hover {
+    background: var(--primary-dark);
+    box-shadow: var(--glow);
+}
+
+/* Fill button */
+#fill {
+    background: var(--accent);
+}
+
+#fill:hover {
+    background: var(--accent-dark);
+    box-shadow: var(--glow);
+}
+
+/* Delete button */
 #deleteProfile {
-  background-color: #f44336;
+    background: var(--danger);
 }
 
 #deleteProfile:hover {
-  background-color: #da190b;
+    background: var(--danger-dark);
+    box-shadow: var(--glow);
+}
+
+/* Import/export buttons */
+.import-export {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.import-export button {
+    flex: 1;
+}
+
+#exportProfiles {
+    background: var(--accent);
+}
+
+#exportProfiles:hover {
+    background: var(--accent-dark);
+    box-shadow: var(--glow);
+}
+
+#importProfiles {
+    background: var(--bg-element);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+}
+
+#importProfiles:hover {
+    background: #455a64;
+    box-shadow: var(--glow);
+}
+
+/* Status messages */
+.status-container {
+    margin-top: 12px;
 }
 
 #status, #formStatus {
-  color: #333;
-  font-size: 0.9em;
-  margin: 5px 0;
+    padding: 10px;
+    border-radius: var(--radius);
+    margin: 6px 0;
+    font-size: 13px;
+    text-align: center;
+    display: block; /* Changed to block to ensure visibility */
+    opacity: 1; /* Default to visible for #formStatus */
+    max-height: 80px;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+#status.show, #formStatus.show {
+    opacity: 1;
+    max-height: 80px;
+}
+
+#status.success, #formStatus.success {
+    background: var(--success-glow);
+    color: var(--success);
+    border: 1px solid var(--success);
+}
+
+#status.error, #formStatus.error {
+    background: rgba(216, 27, 96, 0.2);
+    color: var(--danger);
+    border: 1px solid var(--danger);
+}
+
+/* Minimal footer */
+.footer {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 12px22px;
+    color: var(--text-secondary);
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+/* HR separator */
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 16px 0;
 }
