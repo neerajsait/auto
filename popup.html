@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AutoFill Extension</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="crypto-js.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>AutoFill Extension</h2>
+    <label for="profile">Select Profile:</label>
+    <select id="profile"></select>
+    <button id="deleteProfile">Delete Profile</button>
+    <hr>
+    <label for="profileName">Profile Name:</label>
+    <input type="text" id="profileName" placeholder="Enter profile name">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" placeholder="First Name">
+    <label for="middleName">Middle Name:</label>
+    <input type="text" id="middleName" placeholder="Middle Name">
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" placeholder="Last Name">
+    <label for="age">Age:</label>
+    <input type="number" id="age" placeholder="Age">
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob">
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Email">
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" placeholder="Phone">
+    <label for="custom">Custom Field:</label>
+    <input type="text" id="custom" placeholder="Custom Field">
+    <label for="encryptionKey">Encryption Key (optional):</label>
+    <input type="password" id="encryptionKey" placeholder="Encryption Key">
+    <button id="save">Save Profile</button>
+    <button id="fill">Fill Form</button>
+    <label><input type="checkbox" id="recordMode"> Record Mode</label>
+    <p id="status"></p>
+    <p id="formStatus">Checking for forms...</p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "AutoFill Extension Enhanced",
+  "version": "1.4",
+  "description": "Autofills web forms with saved user details, profiles, and enhanced features.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "webNavigation"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["crypto-js.min.js", "content.js"],
+      "all_frames": true
+    }
+  ],
+  "commands": {
+    "autofill": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Trigger autofill"
+    }
+  }
+}
