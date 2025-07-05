@@ -19,13 +19,14 @@
 ## 📁 Project Structure
 
 autofill-extension/
-├── manifest.json # Chrome Extension metadata
-├── popup.html # Main interface for profile handling
-├── popup.js # Logic to handle form filling and profile actions
-├── styles.css # Basic CSS styling for popup.html
-├── background.js # (Optional) Background scripts if needed
-├── crypto-js.min.js # Library used for optional encryption
-├── tet.html # Test HTML page for trying the extension
+├── manifest.json         # Extension metadata
+├── popup.html            # Extension popup interface
+├── popup.js              # Core logic for form autofill
+├── styles.css            # Styles for popup UI
+├── background.js         # Background tasks (if used)
+├── crypto-js.min.js      # For encryption/decryption (optional)
+└── tet.html              # Sample/test page for demo
+
 
 
 
