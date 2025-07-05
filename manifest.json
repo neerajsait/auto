@@ -1,13 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "AutoFill Extension Enhanced",
-  "version": "1.4",
-  "description": "Autofills web forms with saved user details, profiles, and enhanced features.",
+  "name": "AutoFill Extension ",
+  "version": "1.5",
+  "description": "Autofills web forms with advanced features, regex, and automation.",
   "permissions": [
     "activeTab",
     "storage",
     "contextMenus",
-    "webNavigation"
+    "webNavigation",
+    "scripting"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -29,7 +30,7 @@
         "default": "Ctrl+Shift+F",
         "mac": "Command+Shift+F"
       },
-      "description": "Trigger autofill"
+      "description": "Trigger autofill or cycle profiles"
     }
   }
 }

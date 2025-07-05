@@ -28,13 +28,30 @@
     <input type="email" id="email" placeholder="Email">
     <label for="phone">Phone:</label>
     <input type="tel" id="phone" placeholder="Phone">
-    <label for="custom">Custom Field:</label>
-    <input type="text" id="custom" placeholder="Custom Field">
-    <label for="encryptionKey">Encryption Key (optional):</label>
+    <label for="city">City:</label>
+    <input type="text" id="city" placeholder="City">
+    <label for="state">State:</label>
+    <input type="text" id="state" placeholder="State">
+    <label for="country">Country:</label>
+    <input type="text" id="country" placeholder="Country">
+    <label for="cgpa">CGPA:</label>
+    <input type="number" id="cgpa" placeholder="CGPA" step="0.01" min="0" max="10">
+    <label for="gender">Gender:</label>
+    <select id="gender">
+      <option value="">Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    <label for="custom">Custom:</label>
+    <input type="text" id="custom" placeholder="Custom">
+    <label for="encryptionKey">Encryption Key (Optional):</label>
     <input type="password" id="encryptionKey" placeholder="Encryption Key">
     <button id="save">Save Profile</button>
     <button id="fill">Fill Form</button>
     <label><input type="checkbox" id="recordMode"> Record Mode</label>
+    <button id="exportProfiles">Export Profiles</button>
+    <input type="file" id="importProfiles" accept=".json">
     <p id="status"></p>
     <p id="formStatus">Checking for forms...</p>
   </div>
