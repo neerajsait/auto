@@ -16,23 +16,6 @@
 
 ---
 
-## 📁 Project Structure
-
-autofill-extension/
-##├── manifest.json         # Extension metadata
-├── popup.html            # Extension popup interface
-├── popup.js              # Core logic for form autofill
-├── styles.css            # Styles for popup UI
-├── background.js         # Background tasks (if used)
-├── crypto-js.min.js      # For encryption/decryption (optional)
-└── tet.html              # Sample/test page for demo
-
-
-
-
-
----
-
 ## 🧪 How to Use
 
 1. Click the extension icon to open the popup.
