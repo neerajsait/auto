@@ -19,7 +19,7 @@
 ## 📁 Project Structure
 
 autofill-extension/
-├── manifest.json         # Extension metadata
+##├── manifest.json         # Extension metadata
 ├── popup.html            # Extension popup interface
 ├── popup.js              # Core logic for form autofill
 ├── styles.css            # Styles for popup UI
