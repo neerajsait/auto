@@ -32,4 +32,4 @@
 
 1. Clone or download this repository:
    ```bash
-   git clone https://github.com/neerajsait/auto.git
+   git clone https://github.com/neerajsait/autofill.git
